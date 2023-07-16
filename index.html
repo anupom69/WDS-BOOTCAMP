@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDS BOOTCAMP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="nav nav-top">
+            <img src="img/wds_logo.png" alt="wds logo">
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a class="btn" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="first-page">
+            <h2>WDS Bootcamp</h2>
+            <p class="para">Learn to code by wathing others. Be a pro with experience.</p>
+            <button class="btn">Learn More</button>
+            <img class="arrow-down" src="img/arrow_down.svg" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="section curriculum">
+            <h2 class="section-title">Curriculum</h2>
+            <div class="container">
+                <div class="card">
+                    <i class="fa-brands fa-html5 fa-2x"></i>
+                    <h3>HTML</h3>
+                    <p>Learn the basics of HTML</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-css3-alt fa-2x"></i>
+                    <h3>CSS</h3>
+                    <p>Learn the basics of CSS</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-js fa-2x"></i>
+                    <h3>JavaScript</h3>
+                    <p>Learn the basics of JavaScript</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-php fa-2x"></i>
+                    <h3>PHP</h3>
+                    <p>Learn the basics of PHP</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-database fa-2x"></i>
+                    <h3>MySQL</h3>
+                    <p>Learn the basics of MySQL</p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-wordpress fa-2x"></i>
+                    <h3>WordPress</h3>
+                    <p>Learn the basics of WordPress</p>
+                </div>
+            </div>    
+        </section>
+
+        <section class="free-section">
+            <h2 class="free-title">free</h2>
+            <p>All this things are completely free and will remain free forever. Isn't it amazing!</p>
+        </section>
+        <section class="contact">
+            <h2 class="title">Contact</h2> 
+            <form class="form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="Email">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <button class="btn">Send</button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2021 WDS Bootcamp</p>
+        </footer>
+    </main>
 </body>
 </html>
