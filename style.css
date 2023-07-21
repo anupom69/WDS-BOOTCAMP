@@ -5,12 +5,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ul {
+    list-style: none;
+}
 :root {
     --text: #f8f6f8;
-    --background: #0d0b0f;
+    --background: hsl(270, 15%, 5%);
     --primary: #c2b0ad;
-    --secondary: #20261c;
+    --secondary: hsl(96, 15%, 13%);
     --accent: #759499;
 }
 
@@ -78,6 +80,7 @@ body {
 
 .first-page h2 {
     font-size: 3rem;
+    text-align: center;
 }
 
 .para {
@@ -133,27 +136,6 @@ body {
     gap: 40px;
 }
 
-.free-section {
-    color: var(--text);
-    text-align: center;
-    background-color: var(--secondary);
-    text-align: center;
-    box-shadow: 0 0 100px gray;
-}
-
-.free-title {
-    font-size: 2rem;
-    padding-top: 1rem;
-    text-transform: uppercase;
-}
-
-.free-section p {
-    font-size: 1.2rem;
-    width: 300px;
-    padding-bottom: 1rem;
-    margin: 0 auto;
-}
-
 .contact .title{
     margin-top: 3rem;
     margin-bottom: 2rem;
@@ -164,7 +146,7 @@ body {
 .contact {
     margin: 0 auto; 
     /* text-align: center; */
-    min-width: 700px;
+    /* min-width: 700px; */
     max-width: 80%;
 }
 
@@ -191,7 +173,7 @@ body {
 
 .form input:focus, textarea:focus {
     border: none;
-    outline: 3px solid var(--accent);
+    outline: 2px solid var(--accent);
 }
 
 .form .btn {
@@ -210,4 +192,106 @@ footer {
     color: var(--text);
     text-align: center;
     padding: 1rem;
+}
+
+
+/* Pricing Section  */
+.free-section {
+    background-color: var(--accent);
+    padding: 2em 2em;
+}
+
+.pricing-cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card{
+    background-color: var(--text);
+    border: 1px solid black;
+    padding: 1rem;
+    color: var(--background);
+    border-radius: .3em;
+    margin: 1em 0;
+}
+
+.pricing-card.accent {
+    background-color: var(--secondary);
+    color: var(--text);
+    margin: 0;
+}
+
+.pricing-card:first-child {
+ border-top-right-radius: 0; 
+ border-bottom-right-radius: 0; 
+ border-right: none;
+}
+
+.princing-card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.plan-price::after {
+    content: ' /mo';
+    font-size: .5em;
+    color: hsl(0, 0%, 50%);
+}
+
+.features li {
+    font-size: 1rem;
+    margin: .4em 0;
+}
+
+.features li:last-child {
+    margin-bottom: 0;
+}
+
+.inactive {
+    text-decoration: line-through;
+}
+
+@media (max-width: 700px) {
+    .pricing-cards-container {
+        flex-wrap: wrap;
+    }
+
+    .pricing-card {
+        width: 100%;
+        text-align: center;
+        border: 1px solid black !important;
+        border-radius: 1em !important;
+    }
+
+    .pricing-card.accent {
+        margin:  10px 0;
+    }
+    .features {
+        transform: translate(15%);
+        text-align: start;
+    }
+    .inactive {
+        display: none;
+    }
+
+    .container {
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
