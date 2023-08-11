@@ -1,2 +1,2 @@
 # WDS-BOOTCAMP
- A simple website (fronend only)
+ A simple website (frontend only)
